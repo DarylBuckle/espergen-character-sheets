@@ -1,0 +1,195 @@
+.espergen-character-sheet {
+  font-size: 11px;
+}
+
+.espergen-character-sheet input[type=text] {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.espergen-character-sheet .espergen-page-title{
+  font-size: 48px;
+  color: #d4af37;
+  font-weight: bold;
+  font-family: monospace;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+.espergen-character-sheet .espergen-page-subtitle {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.espergen-character-sheet .upper1 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.espergen-character-sheet .upper1 span {
+  
+  font-size: 150% !important;
+}
+
+.espergen-character-sheet textarea
+{
+  line-height: 25px;
+  background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(0, 0, 0) 0px);
+  background-size: 100% calc(25px + 0px);
+  width: 100%;
+  border: none;
+  resize: none;
+}
+
+
+.espergen-character-sheet input.espergen-linput {
+  border: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  color: black;
+  width: 100%;
+}
+
+.espergen-character-sheet .espergen-circle {
+  border: 4px dashed black;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+.espergen-character-sheet .espergen-circle.solid {
+  border: 2px solid black;
+}
+
+.espergen-character-sheet .espergen-circle .espergen-circle-inner {
+  border: 10px solid #d4af37;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.espergen-character-sheet .espergen-circle input {
+  font-size: 32px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.espergen-character-sheet .espergen-statbox {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 0 20px 20px 0;
+  margin-bottom: 5px;
+}
+.espergen-character-sheet .espergen-statbox div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.espergen-character-sheet .espergen-statbox .espergen-statbox-value {
+  margin: 3px 0 3px 3px;
+  background-color: white;
+  padding: 5px 0;
+  width: 40px;
+  height: 40px;
+}
+.espergen-character-sheet .espergen-statbox .espergen-statbox-value input {
+  text-align: center;
+  font-size: 20px;
+}
+.espergen-character-sheet .espergen-statbox label {
+  color: white;
+  text-transform: uppercase;
+  width: 100px;
+  text-align: center;
+  margin: 3px 0 0;
+}
+.espergen-character-sheet .espergen-statbox label.abbrev {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.espergen-character-sheet .espergen-statbox hr {
+  background-color: white;
+  margin: 0;
+}
+.espergen-character-sheet .espergen-statbox .espergen-statbox-modifier {
+  margin: 3px 45px 3px 0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px 0;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.espergen-character-sheet .espergen-seperator {
+  height: 2px;
+  background-color: black;
+  margin: 6px 0 2px;
+}
+
+.espergen-character-sheet .espergen-round-input {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.espergen-character-sheet .espergen-round-input input {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.espergen-character-sheet .espergen-inline-label {
+  vertical-align: middle;
+  margin: 5px 5px 5px 10px;
+  display: inline-block;
+}
+
+.espergen-character-sheet .espergen-table {
+  border-collapse: collapse;
+}
+.espergen-character-sheet .espergen-table th {
+  text-align: center;
+  font-weight: normal;
+}
+.espergen-character-sheet .espergen-table th:first-child {
+  text-align: left;
+}
+.espergen-character-sheet .espergen-table td:not(:first-child) input {
+  text-align: center;
+}
+.espergen-character-sheet .espergen-table td {
+  border: 1px solid black;
+}
+
+
+.espergen-character-sheet .espergen-skill-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+.espergen-character-sheet .espergen-skill-circle.active {
+  background-color: rgb(207, 207, 207);
+}
+.espergen-character-sheet .espergen-skill input {
+  border-bottom: 1px solid black;
+  width: 25px;
+  margin: 0 10px;
+  text-align: center;
+}
+.espergen-character-sheet .espergen-skill label {
+  margin-bottom: 5px;
+}
+.espergen-character-sheet .espergen-skill .espergen-skill-hint {
+  margin-left: 4px;
+  color: rgb(150, 150, 150);
+}
