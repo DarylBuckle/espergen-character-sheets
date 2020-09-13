@@ -40,40 +40,40 @@ export default class EsperGenCharacter {
 
   skillAcrobatics?: string
   skillAcrobaticsChecked?: boolean
-  skillAnimalHandling?: string
-  skillAnimalHandlingChecked?: boolean
-  skillArcana?: string
-  skillArcanaChecked?: boolean
+  skillAstrophysics?: string
+  skillAstrophysicsChecked?: boolean
   skillAthletics?: string
   skillAthleticsChecked?: boolean
+  skillComputers?: string
+  skillComputersChecked?: boolean
   skillDeception?: string
   skillDeceptionChecked?: boolean
-  skillHistory?: string
-  skillHistoryChecked?: boolean
   skillInsight?: string
   skillInsightChecked?: boolean
   skillIntimidation?: string
   skillIntimidationChecked?: boolean
   skillInvestigation?: string
   skillInvestigationChecked?: boolean
+  skillLore?: string
+  skillLoreChecked?: boolean
+  skillMechanics?: string
+  skillMechanicsChecked?: boolean
   skillMedicine?: string
   skillMedicineChecked?: boolean
-  skillNature?: string
-  skillNatureChecked?: boolean
   skillPerception?: string
   skillPerceptionChecked?: boolean
   skillPerformance?: string
   skillPerformanceChecked?: boolean
   skillPersuasion?: string
   skillPersuasionChecked?: boolean
-  skillReligion?: string
-  skillReligionChecked?: boolean
   skillSlightOfHand?: string
   skillSlightOfHandChecked?: boolean
   skillStealth?: string
   skillStealthChecked?: boolean
   skillSurvival?: string
   skillSurvivalChecked?: boolean
+  skillXenobiology?: string
+  skillXenobiologyChecked?: boolean
 
   passivePerception?: string
   senses?: string
@@ -87,28 +87,60 @@ export default class EsperGenCharacter {
   savingThrowAdvs?: string
   specialFeatures?: any
 
-  ac?: string
   init?: string
+  initDex?: string
+  initMisc?: string
   speed?: string
+  encumbered?: string
+
+  ac?: string
+  acBonus?: string
+  acBonusText?: string
+  acShieldBonus?: string
+  acShieldBonusText?: string
+  acDexMod?: string
+  acMediumArmour?: string
+  acHeavyArmour?: string
+  acStealthDisAdv?: string
+  acPowerModifier?: string
+  acPowerModifierText?: string
+  acItemModifier?: string
+  acItemModifierText?: string
+  acMiscBonus?: string
+  acMiscBonusText?: string
 
   maxHp?: string
-  hp?: string
+  wounds?: string
   tempHp?: string
 
-  hitDiceMax?: string
-  hitDice?: string
+  resistances?: string
+
+  hitDice1Lvl?: string
+  hitDice1Type?: string
+  hitDice1Con?: string
+  hitDice1Used?: string
+
+  hitDice2Lvl?: string
+  hitDice2Type?: string
+  hitDice2Con?: string
+  hitDice2Used?: string
+
+  hitDice3Lvl?: string
+  hitDice3Type?: string
+  hitDice3Con?: string
+  hitDice3Used?: string
 
   deathsaveSuccesses?: number
   deathsaveFailures?: number
 
   attacks?: any[]
-  attacksText?: string
+  attacksPerAction?: string
 
-  cp?: string
-  sp?: string
-  ep?: string
-  gp?: string
-  pp?: string
+  actions?: string
+  bonusActions?: string
+  reactions?: string
+
+/*
   equipment?: string
   equipment2?: string
 
@@ -119,20 +151,12 @@ export default class EsperGenCharacter {
 
   featuresTraits?: string
 
-  appearance?: string
   backstory?: string
-
-  factionImg?: string
-  factionRank?: string
   allies?: string
-  allies2?: string
-
   additionalFeatures?: string
-  additionalFeatures2?: string
 
   totalNonConsumableMagicItems?: string
   treasure?: string
-  treasure2?: string
 
   spellcastingClass?: string
   preparedSpellsTotal?: string
@@ -176,4 +200,5 @@ export default class EsperGenCharacter {
   lvl9SpellSlotsTotal?: string
   lvl9SpellSlotsUsed?: number
   lvl9Spells?: any[]
+*/
 }

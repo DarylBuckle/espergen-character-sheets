@@ -33,9 +33,12 @@ function AttackTable(props: {
     <table className={classes}>
       <thead>
         <tr>
-          <th>Name</th>
-          <th style={{ width: '70px' }}>Atk Bonus</th>
-          <th>Damage/Type</th>
+          <th>Weapon</th>
+          <th style={{ width: '35px' }}>Prof.</th>
+          <th style={{ width: '70px' }}>Range</th>
+          <th style={{ width: '40px' }}>To Hit</th>
+          <th style={{ width: '70px' }}>Damage</th>
+          <th style={{ width: '70px' }}>Dmg. Type</th>
         </tr>
       </thead>
       <tbody>
@@ -43,12 +46,16 @@ function AttackTable(props: {
           (
             v: {
               name: string | number | readonly string[] | undefined
-              bonus: string | number | readonly string[] | undefined
+              prof: string | number | readonly string[] | undefined
+              range: string | number | readonly string[] | undefined
+              toHit: string | number | readonly string[] | undefined
               damage: string | number | readonly string[] | undefined
+              damageType: string | number | readonly string[] | undefined
+              special: string | number | readonly string[] | undefined
             },
             index: string
           ) => {
-            return (
+            return [
               <tr key={'espergen-table-row-' + props.name + index}>
                 <td>
                   <input
@@ -60,9 +67,25 @@ function AttackTable(props: {
                 <td>
                   <input
                     type='text'
-                    value={v.bonus ? v.bonus : ''}
+                    value={v.prof ? v.prof : ''}
+                    onChange={(e) => updateValue(index, 'prof', e.target.value)}
+                  />
+                </td>
+                <td>
+                  <input
+                    type='text'
+                    value={v.range ? v.range : ''}
                     onChange={(e) =>
-                      updateValue(index, 'bonus', e.target.value)
+                      updateValue(index, 'range', e.target.value)
+                    }
+                  />
+                </td>
+                <td>
+                  <input
+                    type='text'
+                    value={v.toHit ? v.toHit : ''}
+                    onChange={(e) =>
+                      updateValue(index, 'toHit', e.target.value)
                     }
                   />
                 </td>
@@ -75,8 +98,30 @@ function AttackTable(props: {
                     }
                   />
                 </td>
+                <td>
+                  <input
+                    type='text'
+                    value={v.damageType ? v.damageType : ''}
+                    onChange={(e) =>
+                      updateValue(index, 'damageType', e.target.value)
+                    }
+                  />
+                </td>
+              </tr>,
+              <tr key={'espergen-table-row2-' + props.name + index}>
+                <td colSpan={6}>
+                  <label className='mb-0 mr-2'>Special</label>
+                  <input
+                    type='text'
+                    style={{ width: 'calc(100% - 50px' }}
+                    value={v.special ? v.special : ''}
+                    onChange={(e) =>
+                      updateValue(index, 'special', e.target.value)
+                    }
+                  />
+                </td>
               </tr>
-            )
+            ]
           }
         )}
       </tbody>

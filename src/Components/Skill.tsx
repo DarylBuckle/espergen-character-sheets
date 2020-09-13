@@ -16,12 +16,6 @@ function Skill(props: {
 
   return (
     <div className={classes}>
-      <div
-        className={
-          props.checked ? 'espergen-skill-circle active' : 'espergen-skill-circle'
-        }
-        onClick={() => props.onChange(props.name + 'Checked', !props.checked)}
-      />
       <input
         type='text'
         value={props.value ? props.value : ''}
@@ -31,6 +25,14 @@ function Skill(props: {
       {props.hint ? (
         <span className='espergen-skill-hint'>{props.hint}</span>
       ) : null}
+      <div
+        className={
+          props.checked
+            ? 'espergen-skill-circle active'
+            : 'espergen-skill-circle'
+        }
+        onClick={() => props.onChange(props.name + 'Checked', !props.checked)}
+      />
     </div>
   )
 }

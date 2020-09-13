@@ -33,14 +33,17 @@
   font-size: 150% !important;
 }
 
-.espergen-character-sheet textarea
+.espergen-character-sheet textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+}
+
+.espergen-character-sheet textarea.espergen-linedtextarea
 {
   line-height: 25px;
   background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(0, 0, 0) 0px);
   background-size: 100% calc(25px + 0px);
-  width: 100%;
-  border: none;
-  resize: none;
 }
 
 
@@ -58,6 +61,7 @@
   width: 100px;
   margin: 0 auto;
 }
+
 .espergen-character-sheet .espergen-circle.solid {
   border: 2px solid black;
 }
@@ -143,6 +147,14 @@
   text-align: center;
   padding: 5px 0;
 }
+.espergen-character-sheet .espergen-round-input.large {
+  height: 36px;
+  width: 36px;
+}
+.espergen-character-sheet .espergen-round-input.large input {
+  padding: 4px 0;
+  font-size: 16px;
+}
 
 .espergen-character-sheet .espergen-inline-label {
   vertical-align: middle;
@@ -152,6 +164,7 @@
 
 .espergen-character-sheet .espergen-table {
   border-collapse: collapse;
+  width: 100%;
 }
 .espergen-character-sheet .espergen-table th {
   text-align: center;
@@ -169,10 +182,11 @@
 
 
 .espergen-character-sheet .espergen-skill-circle {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 1px solid black;
+  background-color: white;
   vertical-align: middle;
   display: inline-block;
   cursor: pointer;
@@ -180,16 +194,189 @@
 .espergen-character-sheet .espergen-skill-circle.active {
   background-color: rgb(207, 207, 207);
 }
-.espergen-character-sheet .espergen-skill input {
+.espergen-character-sheet .espergen-skilllist {
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
-  width: 25px;
-  margin: 0 10px;
+}
+.espergen-character-sheet .espergen-skill {
+  padding: 1px 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.espergen-character-sheet .espergen-skill .espergen-skill-circle {
+  margin: 3px 20px;
+  float: right;
+}
+.espergen-character-sheet .espergen-skill input {
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 25px;
+  margin: 0px 10px 0 5px;
   text-align: center;
 }
 .espergen-character-sheet .espergen-skill label {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  font-size: 14px;
 }
 .espergen-character-sheet .espergen-skill .espergen-skill-hint {
   margin-left: 4px;
-  color: rgb(150, 150, 150);
+  font-size: 14px;
+}
+
+.espergen-character-sheet .espergen-skilllist .espergen-skill:nth-child(odd) {
+  background-color: rgb(208, 231, 243);
+}
+
+.espergen-character-sheet .espergen-page-break {
+  background-color: #d4af37;
+  height: 2px;
+  margin: 2px 0;
+}
+
+.espergen-character-sheet input.espergen-binput {
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  margin: 0 0;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.espergen-character-sheet .espergen-hex:before {
+  content: " ";
+  width: 0; height: 0;
+  border-bottom: 30px solid #d4af37;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  position: absolute;
+  top: -30px;
+}
+.espergen-character-sheet .espergen-hex {
+  margin: 30px auto 0;
+  width: 104px;
+  height: 60px;
+  background-color: #d4af37;
+  position: relative;
+}
+.espergen-character-sheet .espergen-hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  border-top: 30px solid #d4af37;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+
+.espergen-character-sheet .espergen-hex .espergen-circle-inner {
+  background-color: white;
+  border-radius: 50%;
+  width: calc(100% - 40px);
+  height: 100%;
+  border: 2px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
+.espergen-character-sheet .espergen-hex input {
+  font-size: 32px;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.espergen-character-sheet .espergen-box {
+  border: 1px solid black;
+  padding: 4px;
+}
+.espergen-character-sheet .espergen-box.gray {
+  border: none;
+  background-color: rgb(210, 210, 210);
+}
+.espergen-character-sheet .espergen-box.gray input {
+  background-color: white;
+}
+
+
+.espergen-character-sheet .deathsave {
+  float: left;
+  margin-right: -7px;
+  margin-bottom: -13px;
+}
+.espergen-character-sheet .deathsave .left {
+  float: left;
+  width: 0;
+  border-right: 7px solid rgb(210, 210, 210);
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  cursor: pointer;
+}
+.espergen-character-sheet .deathsave .middle {
+  float: left;
+  width: 15px;
+  height: 26px;
+  background: rgb(210, 210, 210);
+  padding: 5px 0;
+  cursor: pointer;
+  color: rgb(0, 50, 255);
+  text-align: center;
+}
+.espergen-character-sheet .deathsave.failure .middle {
+  color: rgb(204, 10, 33);
+}
+.espergen-character-sheet .deathsave .right {
+  float: left;
+  width: 0;
+  border-left: 7px solid rgb(210, 210, 210);
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  cursor: pointer;
+}
+.espergen-character-sheet .deathsave-row {
+  clear: left;
+}
+.espergen-character-sheet .deathsave.even {
+  margin-top: 14px;
+  z-index: -1;
+}
+
+.espergen-character-sheet .deathsave.fake .left, .espergen-character-sheet .deathsave.fake .right {
+  border-color: transparent;
+}
+.espergen-character-sheet .deathsave.fake .middle {
+  background-color: transparent;
+}
+
+.espergen-character-sheet .deathsave.fake.even .left {
+  border-right-color: black;
+}
+.espergen-character-sheet .deathsave.fake.even .right {
+  border-left-color: black;
+}
+.espergen-character-sheet .deathsave.fake.even .middle {
+  background-color: black;
+}
+
+.espergen-character-sheet .deathsave:not(.fake):hover {
+  opacity: .7;
+}
+
+.espergen-character-sheet .deathsave.active .left {
+  border-right-color: rgb(155, 172, 252);
+}
+.espergen-character-sheet .deathsave.active .right {
+  border-left-color: rgb(155, 172, 252);
+}
+.espergen-character-sheet .deathsave.active .middle {
+  background-color: rgb(155, 172, 252);
+}
+.espergen-character-sheet .deathsave.failure.active .left {
+  border-right-color: rgb(252, 125, 125);
+}
+.espergen-character-sheet .deathsave.failure.active .right {
+  border-left-color: rgb(252, 125, 125);
+}
+.espergen-character-sheet .deathsave.failure.active .middle {
+  background-color: rgb(252, 125, 125);
 }
