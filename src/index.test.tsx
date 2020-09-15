@@ -1,12 +1,12 @@
 import {
-  EsperGenCharacterProfileSheet,
+  EsperGenCharacterTraitsSheet,
   EsperGenCharacterStatsSheet,
-  EsperGenCharacterSpellSheet
+  EsperGenCharacterTalentsSheet
 } from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(EsperGenCharacterProfileSheet).toBeTruthy()
+    expect(EsperGenCharacterTraitsSheet).toBeTruthy()
   })
 })
 
@@ -18,6 +18,6 @@ describe('ExampleComponent', () => {
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(EsperGenCharacterSpellSheet).toBeTruthy()
+    expect(EsperGenCharacterTalentsSheet).toBeTruthy()
   })
 })
