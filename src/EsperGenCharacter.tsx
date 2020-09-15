@@ -140,65 +140,103 @@ export default class EsperGenCharacter {
   bonusActions?: string
   reactions?: string
 
-/*
-  equipment?: string
-  equipment2?: string
+  racialFeatures?: string
+  classFeatures?: string
+  backgroundFeature?: string
 
   personalityTraits?: string
   ideals?: string
   bonds?: string
   flaws?: string
 
-  featuresTraits?: string
+  feat1?: string
+  feat2?: string
+  feat3?: string
+  feat4?: string
 
-  backstory?: string
-  allies?: string
-  additionalFeatures?: string
+  profArmourLight?: boolean
+  profArmourMedium?: boolean
+  profArmourHeavy?: boolean
+  profArmourShield?: boolean
+  profWeaponSimple?: boolean
+  profWeaponMartial?: boolean
+  profWeaponOther?: boolean
+  profWeaponOtherText?: string
 
-  totalNonConsumableMagicItems?: string
-  treasure?: string
+  language1?: string
+  language2?: string
+  language3?: string
+  language4?: string
+  language5?: string
+  language6?: string
 
-  spellcastingClass?: string
-  preparedSpellsTotal?: string
-  spellSaveDC?: string
-  spellAttackBonus?: string
+  tool1?: string
+  tool2?: string
+  tool3?: string
+  tool4?: string
+  tool5?: string
+  tool6?: string
 
-  cantrips?: any[]
+  cu?: string
+  lifestyle?: string
+  dailyExpenses?: string
 
-  lvl1SpellSlotsTotal?: string
-  lvl1SpellSlotsUsed?: number
-  lvl1Spells?: any[]
+  gear1?: any
+  gear2?: any
+  otherValuables?: any
+  vehicles?: any
 
-  lvl2SpellSlotsTotal?: string
-  lvl2SpellSlotsUsed?: number
-  lvl2Spells?: any[]
+  totalWeight?: string
+  heavyEncumbered?: string
+  pushLift?: string
 
-  lvl3SpellSlotsTotal?: string
-  lvl3SpellSlotsUsed?: number
-  lvl3Spells?: any[]
+  forgingAbility?: string
 
-  lvl4SpellSlotsTotal?: string
-  lvl4SpellSlotsUsed?: number
-  lvl4Spells?: any[]
+  esperAttackModifier?: string
+  esperPowerDc?: string
 
-  lvl5SpellSlotsTotal?: string
-  lvl5SpellSlotsUsed?: number
-  lvl5Spells?: any[]
+  maxTp?: string
+  remainingTp?: string
 
-  lvl6SpellSlotsTotal?: string
-  lvl6SpellSlotsUsed?: number
-  lvl6Spells?: any[]
+  techniquesPrepared?: string
+  techniqueSlots?: any
+  techniqueSlotsUsed?: any
 
-  lvl7SpellSlotsTotal?: string
-  lvl7SpellSlotsUsed?: number
-  lvl7Spells?: any[]
+  primeTalents?: any[]
 
-  lvl8SpellSlotsTotal?: string
-  lvl8SpellSlotsUsed?: number
-  lvl8Spells?: any[]
+  lvl1TalentSlotsTotal?: string
+  lvl1TalentSlotsUsed?: number
+  lvl1Talents?: any[]
 
-  lvl9SpellSlotsTotal?: string
-  lvl9SpellSlotsUsed?: number
-  lvl9Spells?: any[]
-*/
+  lvl2TalentSlotsTotal?: string
+  lvl2TalentSlotsUsed?: number
+  lvl2Talents?: any[]
+
+  lvl3TalentSlotsTotal?: string
+  lvl3TalentSlotsUsed?: number
+  lvl3Talents?: any[]
+
+  lvl4TalentSlotsTotal?: string
+  lvl4TalentSlotsUsed?: number
+  lvl4Talents?: any[]
+
+  lvl5TalentSlotsTotal?: string
+  lvl5TalentSlotsUsed?: number
+  lvl5Talents?: any[]
+
+  lvl6TalentSlotsTotal?: string
+  lvl6TalentSlotsUsed?: number
+  lvl6Talents?: any[]
+
+  lvl7TalentSlotsTotal?: string
+  lvl7TalentSlotsUsed?: number
+  lvl7Talents?: any[]
+
+  lvl8TalentSlotsTotal?: string
+  lvl8TalentSlotsUsed?: number
+  lvl8Talents?: any[]
+
+  lvl9TalentSlotsTotal?: string
+  lvl9TalentSlotsUsed?: number
+  lvl9Talents?: any[]
 }

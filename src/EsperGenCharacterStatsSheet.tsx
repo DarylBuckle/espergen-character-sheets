@@ -115,7 +115,7 @@ class EsperGenCharacterStatsSheet extends React.Component<
                     style={{ width: 'calc(100% - 60px)' }}
                     className='espergen-linput'
                     value={character.campaign ? character.campaign : ''}
-                    onChange={(e) => this.updateCharacter('xp', e.target.value)}
+                    onChange={(e) => this.updateCharacter('campaign', e.target.value)}
                   />
                 </div>
               </div>

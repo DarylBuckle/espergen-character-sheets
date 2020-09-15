@@ -10,7 +10,7 @@ import {
 import axios from 'axios'
 import qs from 'qs'
 
-import { EsperGenCharacterStatsSheet, EsperGenCharacterProfileSheet, EsperGenCharacterSpellSheet, EsperGenCharacter } from 'espergen-character-sheets'
+import { EsperGenCharacterStatsSheet, EsperGenCharacterTraitsSheet, EsperGenCharacterTalentsSheet, EsperGenCharacter } from 'espergen-character-sheets'
 import 'espergen-character-sheets/dist/index.css'
 
 function ScrollToTop() {
@@ -65,13 +65,13 @@ const App = (props: any) => {
     />
   )
   const profileSheet = (
-    <EsperGenCharacterProfileSheet
+    <EsperGenCharacterTraitsSheet
       character={character}
       onCharacterChanged={updateCharacter}
     />
   )
   const spellSheet = (
-    <EsperGenCharacterSpellSheet
+    <EsperGenCharacterTalentsSheet
       character={character}
       onCharacterChanged={updateCharacter}
     />

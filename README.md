@@ -6,7 +6,7 @@
 
 [![NPM](https://img.shields.io/npm/v/espergen-character-sheets.svg)](https://www.npmjs.com/package/espergen-character-sheets) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-<img width="600" alt="Screenshot 2020-09-06 at 19 35 55" src="https://user-images.githubusercontent.com/15156674/92332881-adbfee80-f078-11ea-8bcc-82cfb6484465.png">
+<img width="600" alt="espergen-character-sheets-thumb" src="https://user-images.githubusercontent.com/15156674/93252342-3d5a5100-f78d-11ea-9987-8ae497cd846e.png">
 
 
 ## Contents
@@ -21,7 +21,7 @@
 
 ## About
 
-ReactJS components that render Esper Genesis character sheets, namely a character stats sheet, character profile sheet and spell sheet.
+ReactJS components that render Esper Genesis character sheets, namely a character stats sheet, character traits sheet and esper talents sheet.
 
 Visit [https://darylbuckle.github.io/espergen-character-sheets](https://darylbuckle.github.io/espergen-character-sheets) to see these components in use.
 
@@ -51,9 +51,9 @@ class Example extends Component {
 
 ```EsperGenCharacterStatsSheet``` renders a stats sheet.
 
-```EsperGenCharacterProfileSheet``` renders a stats sheet.
+```EsperGenCharacterTraitsSheet``` renders a character traits sheet.
 
-```EsperGenCharacterSpellSheet``` renders a stats sheet.
+```EsperGenCharacterTalentsSheet``` renders a esper talents sheet.
 
 
 ## Props
@@ -75,14 +75,26 @@ The EsperGenCharacter class holds the attributes of a character. The attributes 
 
 ```tsx
   name?: string
-  classLevel?: string
-  background?: string
+  level?: string
+  class?: string
   playerName?: string
-  faction?: string
   race?: string
-  alignment?: string
+  background?: string
+
   xp?: string
-  dciNo?: string
+  nextXp?: string
+  campaign?: string
+  corpsSerialNumber?: string
+
+  gender?: string
+  size?: string
+  age?: string
+  height?: string
+  weight?: string
+  eyes?: string
+  skin?: string
+  hair?: string
+  alignment?: string
 
   str?: string
   dex?: string
@@ -95,155 +107,214 @@ The EsperGenCharacter class holds the attributes of a character. The attributes 
   proficiencyBonus?: string
 
   strSave?: string
-  strSaveChecked?: boolean
   dexSave?: string
-  dexSaveChecked?: boolean
   conSave?: string
-  conSaveChecked?: boolean
   intSave?: string
-  intSaveChecked?: boolean
   wisSave?: string
-  wisSaveChecked?: boolean
   chaSave?: string
-  chaSaveChecked?: boolean
 
   skillAcrobatics?: string
   skillAcrobaticsChecked?: boolean
-  skillAnimalHandling?: string
-  skillAnimalHandlingChecked?: boolean
-  skillArcana?: string
-  skillArcanaChecked?: boolean
+  skillAstrophysics?: string
+  skillAstrophysicsChecked?: boolean
   skillAthletics?: string
   skillAthleticsChecked?: boolean
+  skillComputers?: string
+  skillComputersChecked?: boolean
   skillDeception?: string
   skillDeceptionChecked?: boolean
-  skillHistory?: string
-  skillHistoryChecked?: boolean
   skillInsight?: string
   skillInsightChecked?: boolean
   skillIntimidation?: string
   skillIntimidationChecked?: boolean
   skillInvestigation?: string
   skillInvestigationChecked?: boolean
+  skillLore?: string
+  skillLoreChecked?: boolean
+  skillMechanics?: string
+  skillMechanicsChecked?: boolean
   skillMedicine?: string
   skillMedicineChecked?: boolean
-  skillNature?: string
-  skillNatureChecked?: boolean
   skillPerception?: string
   skillPerceptionChecked?: boolean
   skillPerformance?: string
   skillPerformanceChecked?: boolean
   skillPersuasion?: string
   skillPersuasionChecked?: boolean
-  skillReligion?: string
-  skillReligionChecked?: boolean
   skillSlightOfHand?: string
   skillSlightOfHandChecked?: boolean
   skillStealth?: string
   skillStealthChecked?: boolean
   skillSurvival?: string
   skillSurvivalChecked?: boolean
+  skillXenobiology?: string
+  skillXenobiologyChecked?: boolean
 
   passivePerception?: string
-  otherProficiencies?: string
+  senses?: string
+
+  burstDc?: string
+  burstSave?: string
+  abilitySave1Mod?: string
+  abilitySave1Dc?: string
+  abilitySave2Mod?: string
+  abilitySave2Dc?: string
+  savingThrowAdvs?: string
+  specialFeatures?: any
+
+  init?: string
+  initDex?: string
+  initMisc?: string
+  speed?: string
+  encumbered?: string
 
   ac?: string
-  init?: string
-  speed?: string
+  acBonus?: string
+  acBonusText?: string
+  acShieldBonus?: string
+  acShieldBonusText?: string
+  acDexMod?: string
+  acMediumArmour?: string
+  acHeavyArmour?: string
+  acStealthDisAdv?: string
+  acPowerModifier?: string
+  acPowerModifierText?: string
+  acItemModifier?: string
+  acItemModifierText?: string
+  acMiscBonus?: string
+  acMiscBonusText?: string
 
   maxHp?: string
-  hp?: string
+  wounds?: string
   tempHp?: string
 
-  hitDiceMax?: string
-  hitDice?: string
+  resistances?: string
+
+  hitDice1Lvl?: string
+  hitDice1Type?: string
+  hitDice1Con?: string
+  hitDice1Used?: string
+
+  hitDice2Lvl?: string
+  hitDice2Type?: string
+  hitDice2Con?: string
+  hitDice2Used?: string
+
+  hitDice3Lvl?: string
+  hitDice3Type?: string
+  hitDice3Con?: string
+  hitDice3Used?: string
 
   deathsaveSuccesses?: number
   deathsaveFailures?: number
 
   attacks?: any[]
-  attacksText?: string
+  attacksPerAction?: string
 
-  cp?: string
-  sp?: string
-  ep?: string
-  gp?: string
-  pp?: string
-  equipment?: string
-  equipment2?: string
+  actions?: string
+  bonusActions?: string
+  reactions?: string
+
+  racialFeatures?: string
+  classFeatures?: string
+  backgroundFeature?: string
 
   personalityTraits?: string
   ideals?: string
   bonds?: string
   flaws?: string
 
-  featuresTraits?: string
+  feat1?: string
+  feat2?: string
+  feat3?: string
+  feat4?: string
 
-  age?: string
-  height?: string
-  weight?: string
-  eyes?: string
-  skin?: string
-  hair?: string
+  profArmourLight?: boolean
+  profArmourMedium?: boolean
+  profArmourHeavy?: boolean
+  profArmourShield?: boolean
+  profWeaponSimple?: boolean
+  profWeaponMartial?: boolean
+  profWeaponOther?: boolean
+  profWeaponOtherText?: string
 
-  appearance?: string
-  backstory?: string
+  language1?: string
+  language2?: string
+  language3?: string
+  language4?: string
+  language5?: string
+  language6?: string
 
-  factionImg?: string
-  factionRank?: string
-  allies?: string
-  allies2?: string
+  tool1?: string
+  tool2?: string
+  tool3?: string
+  tool4?: string
+  tool5?: string
+  tool6?: string
 
-  additionalFeatures?: string
-  additionalFeatures2?: string
+  cu?: string
+  lifestyle?: string
+  dailyExpenses?: string
 
-  totalNonConsumableMagicItems?: string
-  treasure?: string
-  treasure2?: string
+  gear1?: any
+  gear2?: any
+  otherValuables?: any
+  vehicles?: any
 
-  spellcastingClass?: string
-  preparedSpellsTotal?: string
-  spellSaveDC?: string
-  spellAttackBonus?: string
+  totalWeight?: string
+  heavyEncumbered?: string
+  pushLift?: string
 
-  cantrips?: any[]
+  forgingAbility?: string
 
-  lvl1SpellSlotsTotal?: string
-  lvl1SpellSlotsUsed?: number
-  lvl1Spells?: any[]
+  esperAttackModifier?: string
+  esperPowerDc?: string
 
-  lvl2SpellSlotsTotal?: string
-  lvl2SpellSlotsUsed?: number
-  lvl2Spells?: any[]
+  maxTp?: string
+  remainingTp?: string
 
-  lvl3SpellSlotsTotal?: string
-  lvl3SpellSlotsUsed?: number
-  lvl3Spells?: any[]
+  techniquesPrepared?: string
+  techniqueSlots?: any
+  techniqueSlotsUsed?: any
 
-  lvl4SpellSlotsTotal?: string
-  lvl4SpellSlotsUsed?: number
-  lvl4Spells?: any[]
+  primeTalents?: any[]
 
-  lvl5SpellSlotsTotal?: string
-  lvl5SpellSlotsUsed?: number
-  lvl5Spells?: any[]
+  lvl1TalentSlotsTotal?: string
+  lvl1TalentSlotsUsed?: number
+  lvl1Talents?: any[]
 
-  lvl6SpellSlotsTotal?: string
-  lvl6SpellSlotsUsed?: number
-  lvl6Spells?: any[]
+  lvl2TalentSlotsTotal?: string
+  lvl2TalentSlotsUsed?: number
+  lvl2Talents?: any[]
 
-  lvl7SpellSlotsTotal?: string
-  lvl7SpellSlotsUsed?: number
-  lvl7Spells?: any[]
+  lvl3TalentSlotsTotal?: string
+  lvl3TalentSlotsUsed?: number
+  lvl3Talents?: any[]
 
-  lvl8SpellSlotsTotal?: string
-  lvl8SpellSlotsUsed?: number
-  lvl8Spells?: any[]
+  lvl4TalentSlotsTotal?: string
+  lvl4TalentSlotsUsed?: number
+  lvl4Talents?: any[]
 
-  lvl9SpellSlotsTotal?: string
-  lvl9SpellSlotsUsed?: number
-  lvl9Spells?: any[]
-  ```
+  lvl5TalentSlotsTotal?: string
+  lvl5TalentSlotsUsed?: number
+  lvl5Talents?: any[]
+
+  lvl6TalentSlotsTotal?: string
+  lvl6TalentSlotsUsed?: number
+  lvl6Talents?: any[]
+
+  lvl7TalentSlotsTotal?: string
+  lvl7TalentSlotsUsed?: number
+  lvl7Talents?: any[]
+
+  lvl8TalentSlotsTotal?: string
+  lvl8TalentSlotsUsed?: number
+  lvl8Talents?: any[]
+
+  lvl9TalentSlotsTotal?: string
+  lvl9TalentSlotsUsed?: number
+  lvl9Talents?: any[]
+```
 
 
 ## License

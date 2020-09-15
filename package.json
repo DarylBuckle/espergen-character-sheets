@@ -1,6 +1,6 @@
 {
   "name": "espergen-character-sheets",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Esper Genesis 5th Edition character sheets created in ReactJS.",
   "author": "DarylBuckle",
   "license": "MIT",

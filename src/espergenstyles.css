@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+.espergen-character-sheet input[type=checkbox] {
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-right: 3px;
+}
+
 .espergen-character-sheet .espergen-page-title{
   font-size: 48px;
   color: #d4af37;
@@ -43,7 +49,8 @@
 {
   line-height: 25px;
   background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(0, 0, 0) 0px);
-  background-size: 100% calc(25px + 0px);
+  background-size: 100% calc(25px - 0px);
+  background-position-y: -2px;
 }
 
 
@@ -379,4 +386,85 @@
 }
 .espergen-character-sheet .deathsave.failure.active .middle {
   background-color: rgb(252, 125, 125);
+}
+
+.espergen-character-sheet .espergen-coin {
+  border-radius: 50%;
+  border: 2px black solid;
+  background-color: #d4af37;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.espergen-character-sheet .espergen-talentlist {
+  margin-bottom: 15px;
+}
+.espergen-character-sheet .espergen-talentlist .espergen-talent-header {
+  border: 1px solid black;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #d4af37;
+}
+.espergen-character-sheet .espergen-talentlist .espergen-talent-header .tp {
+  position: absolute;
+  right: 5px;
+}
+.espergen-character-sheet .espergen-talentlist table {
+  width: 100%;
+  position: relative;
+}
+.espergen-character-sheet .espergen-talentlist table .espergen-skill-circle {
+  margin-left: 3px;
+}
+.espergen-character-sheet .espergen-talentlist table th {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 6px;
+}
+.espergen-character-sheet .espergen-talentlist table tr input {
+  width: 100%;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  font-size: 15px;
+}
+.espergen-character-sheet .espergen-talentlist table .espergen-talent-prepared {
+  width: 25px;
+}
+
+.espergen-character-sheet .espergen-talentlist .espergen-talent-header-labels div {
+  display: inline-block;
+}
+.espergen-character-sheet .espergen-talentlist .espergen-talent-header-labels label {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6px;
+}
+
+.espergen-character-sheet .espergen-technique-table {
+  text-align: center;
+}
+.espergen-character-sheet .espergen-technique-table th:not(:first-child) {
+  background-color: #d4af37;
+  border: 1px solid black;
+  padding-bottom: 5px;
+}
+.espergen-character-sheet .espergen-technique-table td:not(:first-child) {
+  border: 1px solid black;
+}
+.espergen-character-sheet .espergen-technique-table td:first-child {
+  font-size: 16px;
+  padding: 5px;
+}
+.espergen-character-sheet .espergen-technique-table td input {
+  text-align: center;
+  font-size: 20px;
 }

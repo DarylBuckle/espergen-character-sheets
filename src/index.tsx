@@ -1,12 +1,12 @@
 import EsperGenCharacter from './EsperGenCharacter'
 import EsperGenCharacterStatsSheet from './EsperGenCharacterStatsSheet'
-import EsperGenCharacterProfileSheet from './EsperGenCharacterProfileSheet'
-import EsperGenCharacterSpellSheet from './EsperGenCharacterSpellSheet'
+import EsperGenCharacterTraitsSheet from './EsperGenCharacterTraitsSheet'
+import EsperGenCharacterTalentsSheet from './EsperGenCharacterTalentsSheet'
 import 'bootstrap/dist/css/bootstrap.css'
 
 export {
   EsperGenCharacterStatsSheet,
-  EsperGenCharacterProfileSheet,
-  EsperGenCharacterSpellSheet,
+  EsperGenCharacterTraitsSheet,
+  EsperGenCharacterTalentsSheet,
   EsperGenCharacter
 }
